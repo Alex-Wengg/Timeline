@@ -4,8 +4,8 @@ import Timeline from 'react-calendar-timeline';
 
 import { eventTypeColors, keys } from './TimeLineComponent/constants';
 import AddEvent from './TimeLineComponent/AddEvent';
-import { MoveEvent, ResizeEvent } from './TimeLineComponent/EditEvent';
-import FilterEvent from './TimeLineComponent/FilterEvent';
+import { MoveEvent, ResizeEvent } from './TimeLineComponent/EditEvent'; // Import utilities
+import FilterEvent from './TimeLineComponent/FilterEvent'; // Import the new component
 import ListView from './ListView';
 import { postData, getData} from './api/backendRequests';
 
@@ -60,6 +60,12 @@ const App = () => {
               type: formData.type,
               start: moment(formData.start).valueOf(),
               end: moment(formData.end).valueOf(),
+              color: eventTypeColors[formData.type],
+              itemProps: {
+                style: {
+                  background: eventTypeColors[formData.type],
+                },
+              }
             }
           : item
       )
