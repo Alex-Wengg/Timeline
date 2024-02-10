@@ -4,8 +4,8 @@ import Timeline from 'react-calendar-timeline';
 
 import { eventTypeColors, keys } from './TimeLineComponent/constants';
 import AddEvent from './TimeLineComponent/AddEvent';
-import { MoveEvent, ResizeEvent } from './TimeLineComponent/EditEvent'; // Import utilities
-import FilterEvent from './TimeLineComponent/FilterEvent'; // Import the new component
+import { MoveEvent, ResizeEvent } from './TimeLineComponent/EditEvent';
+import FilterEvent from './TimeLineComponent/FilterEvent';
 import ListView from './ListView';
 import { postData, getData} from './api/backendRequests';
 
